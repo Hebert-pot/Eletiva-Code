@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Eletivas - Escola Estadual João Roberto Moreira</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Tela de Login -->
+        <div id="login-screen" class="screen">
+            <button id="toggle-theme" class="theme-btn">
+                <span class="icon">🌙</span>
+            </button>
+            <div class="login-box">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Bras%C3%A3o_de_Goi%C3%A1s.svg/1200px-Bras%C3%A3o_de_Goi%C3%A1s.svg.png" alt="Brasão de Goiás" class="brasao">
+                <h2>Portal de Eletivas</h2>
+                <h3>Escola Estadual João Roberto Moreira</h3>
+                <p><strong>Preencha as informações abaixo para continuar:</strong></p>
+                <label for="nomeAluno">Nome completo <span class="necessario">*</span></label>
+                <input type="text" id="nomeAluno" placeholder="Ex: Maria Oliveira dos Santos" />
+                <label for="serieAluno">Série <span class="necessario">*</span></label>
+                <select id="serieAluno">
+                    <option value="">Selecione sua série</option>
+                    <option>9º Ano</option>
+                    <option>1º A</option>
+                    <option>1º B</option>
+                    <option>2º A</option>
+                    <option>2º B</option>
+                    <option>3º A</option>
+                    <option>3º B</option>
+                </select>
+                <button id="entrar-btn" class="btn-primary">
+                    <span class="btn-text">Entrar</span>
+                    <span class="btn-icon">→</span>
+                </button>
+                <p id="login-error" class="error"></p>
+            </div>
+        </div>
+
+        <!-- Tela de Eletivas -->
+        <div id="main-screen" class="screen hidden">
+            <h2>Escolha sua Eletiva</h2>
+            <p id="welcome"></p>
+            <div id="eletivas-list" class="eletivas-grid"></div>
+            <button id="confirmar-btn" class="btn-primary">
+                <span class="btn-text">Confirmar Escolha</span>
+                <span class="btn-icon">✓</span>
+            </button>
+            <p id="mensagem" class="error"></p>
+        </div>
+
+        <!-- Tela da Lista -->
+        <div id="lista-screen" class="screen hidden">
+            <h2>Lista da Eletiva</h2>
+            <p id="eletiva-nome"></p>
+            <p id="vagas-info"></p>
+            <ul id="alunos-lista"></ul>
+            <button id="sair-btn" class="btn-secondary">
+                <span class="btn-text">Sair</span>
+                <span class="btn-icon">←</span>
+            </button>
+        </div>
+
+        <!-- Painel Administrativo -->
+        <div id="admin-panel" class="screen hidden">
+            <h2>Painel Administrativo</h2>
+            <div id="admin-listas" class="admin-grid"></div>
+            <button id="fechar-admin" class="btn-secondary">
+                <span class="btn-text">Fechar</span>
+                <span class="btn-icon">×</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
